@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ONEULApp.Views.MainPage">
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <ScrollView Grid.Row="0">
+                <StackLayout Orientation="Vertical">
+                    <Frame BackgroundColor="White" Padding="15">
+                        <Label Text="TimeLine" FontSize="23" TextColor="#E88346" />
+                    </Frame>
+                    <Grid>
+                        <ListView x:Name="mainListView" 
+                                  Margin="10">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <TextCell Text="{Binding Title}"
+                                              TextColor="Black"
+                                              Detail="{Binding Memo}"/>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+
+            <Button x:Name="btnAdd" Clicked="btnAdd_Clicked"
+                    Grid.Row="0" Text="Add" BackgroundColor="#E88346" TextColor="White"
+                    HorizontalOptions="End" Margin="0,0,20,22" VerticalOptions="End"
+                    CornerRadius="50"/>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:tabbedbottom="clr-namespace:ONEULApp.Views"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+             x:Class="ONEULApp.Tabbed">
+
+    <TabbedPage.Resources>
+        <Style x:Key="BaseStyle" TargetType="Element">
+            <Setter Property="Shell.BackgroundColor" Value="#E88346"/>
+            <Setter Property="Shell.ForegroundColor" Value="White"/>
+            <Setter Property="Shell.TitleColor" Value="White"/>
+            <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF"/>
+            <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+            <Setter Property="Shell.TabBarBackgroundColor" Value="#E88346" />
+            <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
+            <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
+            <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+        </Style>
+        <Style TargetType="TabbedPage" BasedOn="{StaticResource BaseStyle}" />
+    </TabbedPage.Resources>
+    
+  <!--Pages can be added as references or inline-->
+    <tabbedbottom:MainPage Title="Home" IconImageSource="home.png"></tabbedbottom:MainPage>
+    <tabbedbottom:ReportPage Title="Report" IconImageSource="file.png"></tabbedbottom:ReportPage>
+    <tabbedbottom:SettingPage Title="Setting" IconImageSource="settings.png"></tabbedbottom:SettingPage>
+    
+</TabbedPage>
