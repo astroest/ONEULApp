@@ -5,7 +5,7 @@ using SQLite;
 
 namespace ONEULApp
 {
-    class OneulDB
+    public class OneulDB
     {
 
         [PrimaryKey, AutoIncrement]

@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ONEULApp.Data;
 
 namespace ONEULApp
 {
@@ -10,7 +11,12 @@ namespace ONEULApp
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Tabbed());
+            MainPage = new NavigationPage(Locator.Resolve<Tabbed>());
+
+            Locator.Initialize();
+
+            OneulRepository repository = Locator.Resolve<OneulRepository>();
+            repository.Initialize();
         }
 
         protected override void OnStart()

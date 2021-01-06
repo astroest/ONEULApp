@@ -21,9 +21,9 @@
                     Text="{Binding WriteMemo, Mode=TwoWay}" 
                     FontSize="18" Margin="10"/>
             <Button x:Name="commandWrite" 
-                    Text="완료" Command="{Binding commandWrite}" 
+                    Text="완료" Clicked="commandWrite_Clicked" 
                     BackgroundColor="#E88346" TextColor="White"
-                    VerticalOptions="End"/>
+                    VerticalOptions="End" Margin="10"/>
 
         </StackLayout>
 
